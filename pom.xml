@@ -9,6 +9,13 @@
     <name>SAP AG</name>
   </organization>
 
+  <parent>
+    <groupId>com.sap.prd.mobile.ios.mios</groupId>
+    <artifactId>quality-check-parent</artifactId>
+    <version>1.0.0</version>
+    <relativePath />
+  </parent>
+    
   <name>xcode-maven-plugin verification check API</name>
   <description>This project conatins the contract between the xcode-maven-plugin and the verification checks.</description>
     
@@ -108,6 +115,10 @@
                       </goals>
                   </execution>
               </executions>
+          </plugin>
+          <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
           </plugin>
       </plugins>
   </build>
